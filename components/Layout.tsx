@@ -12,7 +12,7 @@ export default function Layout({ children, sidebar }: LayoutProps) {
   const isPapers = pathname.startsWith('/papers');
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col w-full">
+    <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col w-full text-[0.8rem]">
       {/* Navbar */}
       <nav className="bg-gray-800 border-b border-gray-700 sticky top-0 z-50 h-20 flex items-center w-full">
         <div className={`w-full flex justify-between items-center h-20 px-4 sm:px-6 lg:px-8 ${!isPapers ? 'max-w-4xl mx-auto' : ''}`}>

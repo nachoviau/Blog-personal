@@ -142,9 +142,8 @@ export default function PapersPage({ pendientes, leidos, analisisMap, analisisIn
           </div>
         </article>
       ) : (
-        <div className="text-center text-gray-400 text-xl font-mono mt-16">
-          <div className="mb-4">📚</div>
-          <div>Seleccioná un paper leído para ver el análisis.</div>
+        <div className="text-left text-gray-400 text-xl font-mono mt-16">
+          Seleccioná un paper leído para ver el análisis.
         </div>
       )}
     </Layout>

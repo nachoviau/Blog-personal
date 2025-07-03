@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="mt-12 font-mono text-left">
-        <span className="block text-7xl font-bold mb-10 text-white font-mono leading-tight">¡Hola!</span>
+        <span className="block text-5xl font-bold mb-10 text-white font-mono leading-tight">¡Hola!</span>
         <div className="inline-block w-full">
           <div className="h-1 bg-orange-500 mb-8 w-full" />
           <p className="text-xl text-gray-300 leading-relaxed font-mono mb-8">
