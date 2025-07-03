@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Layout from '../../components/Layout';

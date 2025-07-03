@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 export default function AboutPage() {
@@ -157,7 +156,7 @@ export default function AboutPage() {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <p className="text-gray-300">• Hospice San Camilo</p>
-                    <p className="text-gray-300">• Barrio "El Garrote"</p>
+                    <p className="text-gray-300">• Barrio &quot;El Garrote&quot;</p>
                     <p className="text-gray-300">• Fundación Espartanos</p>
                   </div>
                 </div>
