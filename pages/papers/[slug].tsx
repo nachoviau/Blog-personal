@@ -103,7 +103,7 @@ export default function PaperPage({ post }: PaperPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const postsDirectory = path.join(process.cwd(), 'posts', 'posts');
+  const postsDirectory = path.join(process.cwd(), 'posts');
   
   try {
     const filenames = fs.readdirSync(postsDirectory);
@@ -131,7 +131,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<PaperPageProps> = async ({ params }) => {
   const slug = params?.slug as string;
-  const postsDirectory = path.join(process.cwd(), 'posts', 'posts');
+  const postsDirectory = path.join(process.cwd(), 'posts');
   const filePath = path.join(postsDirectory, `${slug}.md`);
 
   try {
