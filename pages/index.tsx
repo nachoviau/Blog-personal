@@ -72,7 +72,7 @@ export default function Home() {
 }
 
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'posts', 'posts');
+  const postsDirectory = path.join(process.cwd(), 'posts');
   const filenames = fs.readdirSync(postsDirectory);
 
   const posts = filenames
