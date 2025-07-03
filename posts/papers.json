@@ -11,9 +11,9 @@
   ],
   "leidos": [
     {
-      "titulo": "Mi primer paper",
-      "link": "https://ejemplo.com/primer-paper",
-      "analisis": "2025-07-02-primer-paper.md"
+      "titulo": "AlphaFold (2021)",
+      "link": "https://www.nature.com/articles/s41586-021-03819-2",
+      "analisis": "alphafold-2021.md"
     }
   ]
 } 
