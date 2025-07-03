@@ -1,0 +1,19 @@
+{
+  "pendientes": [
+    {
+      "titulo": "A Neural Probabilistic Language Model",
+      "link": "https://www.jmlr.org/papers/volume3/bengio03a/bengio03a.pdf"
+    },
+    {
+      "titulo": "The Lottery Ticket Hypothesis",
+      "link": "https://arxiv.org/abs/1803.03635"
+    }
+  ],
+  "leidos": [
+    {
+      "titulo": "Mi primer paper",
+      "link": "https://ejemplo.com/primer-paper",
+      "analisis": "2025-07-02-primer-paper.md"
+    }
+  ]
+} 
