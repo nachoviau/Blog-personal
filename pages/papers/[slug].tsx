@@ -142,8 +142,8 @@ export const getStaticProps: GetStaticProps<PaperPageProps> = async ({ params })
 
     const post: Post = {
       slug,
-      title: data.title,
-      date: data.date,
+      title: data.title || null,
+      date: data.date || null,
       tags: data.tags || [],
       content: content,
     };

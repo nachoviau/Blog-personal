@@ -84,8 +84,8 @@ export async function getStaticProps() {
 
       return {
         slug: filename.replace(/\.md$/, ''),
-        title: data.title,
-        date: data.date,
+        title: data.title || null,
+        date: data.date || null,
       };
     });
 
