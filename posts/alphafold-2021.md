@@ -7,8 +7,6 @@
 
 AlphaFold es básicamente el momento en que la inteligencia artificial resolvió uno de los problemas más complicados de la biología: predecir cómo se pliega una proteína solo conociendo su secuencia de aminoácidos.
 
-## Lo que me voló la cabeza
-
 ### El problema que atacaron
 Por más de 50 años, los científicos intentaron resolver el "protein folding problem". Las proteínas son como origami molecular - una secuencia lineal de aminoácidos que se pliega en una estructura 3D específica. Y esa estructura determina completamente qué hace la proteína.
 
