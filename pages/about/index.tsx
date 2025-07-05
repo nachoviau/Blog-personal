@@ -19,10 +19,10 @@ export default function AboutPage() {
                 La idea es que esta pagina tambien sirva de cv asi que te comento un poco sobre mi!
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Soy estudiante de Ingeniería Informática y en este camino fui aprendiendo bastante de programación y análisis de datos. Me apasiona la resolución de problemas mediante el uso de tecnología y el trabajo en equipo.
+                Soy estudiante de Ingeniería Informática y en este camino fui aprendiendo bastante de programación y análisis de datos.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                Creo en lo importante que es mantenerse un poco despierto y siempre aprendiendo algo nuevo. Por eso en parte arme esta pagina para compartir lo que aprendo.
+                Creo en lo importante que es mantenerse un poco despierto y siempre aprendiendo algo nuevo. Por eso en parte arme esta pagina para compartir un poco de esto.
               </p>
             </div>
           </section>
