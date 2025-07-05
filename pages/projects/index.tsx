@@ -14,6 +14,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 'duck-game-remake',
+    title: 'Duck Game Remake',
+    description: 'Remake del videojuego Duck Game en C++. Proyecto grupal para Taller de Programación (FIUBA).',
+    tags: ['C++', 'CMake', 'Python', 'Makefile', 'SDL', 'QT'],
+    githubUrl: 'https://github.com/nachoviau/duck-game-remake',
+  },
+  {
     id: 'personal-blog',
     title: 'Blog Personal',
     description: 'Este mismo sitio web construido con Next.js y TypeScript. Un espacio para compartir análisis de papers técnicos y proyectos.',
