@@ -28,6 +28,13 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/nachoviau/Blog-personal', // Enlace real al repo
   },
   {
+    id: 'feliz-cumple-bot',
+    title: 'Feliz Cumple Bot',
+    description: 'Bot de WhatsApp que responde automáticamente a mensajes de feliz cumpleaños usando OpenAI para generar respuestas personalizadas. Desarrollado en JavaScript con whatsapp-web.js.',
+    tags: ['JavaScript', 'WhatsApp Web', 'OpenAI API', 'Bot', 'Automation'],
+    githubUrl: 'https://github.com/nachoviau/feliz-cumple-bot',
+  },
+  {
     id: 'file-transfer-redes',
     title: 'File Transfer Protocol',
     description: 'Implementación de un protocolo de transferencia de archivos para Redes (FIUBA). Desarrollado en Python con mininet.',
