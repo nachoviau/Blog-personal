@@ -295,6 +295,7 @@ export default function AboutPage() {
                   <h3 className="text-lg font-medium text-white mb-3">Personales</h3>
                   <ul className="text-gray-300 space-y-2">
                     <li>• Literatura, música y deportes</li>
+                    <li>• Estudio de violín</li>
                     <li>• Fotografía</li>
                     <li>• Voluntariado social</li>
                     <li>• Enseñanza y tutoría</li>
