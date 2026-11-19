@@ -29,8 +29,8 @@ const projects: Project[] = [
   {
     id: 'buscador-inmobiliario',
     title: 'Buscador de ofertas inmobiliarias',
-    description: 'Proyecto propio, en desarrollo: un buscador que unifica publicaciones de Zonaprop y Argenprop en un solo lugar y las ubica en un mapa, para encontrar buenas ofertas. Corre en un home server que administro yo.',
-    tags: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Playwright', 'Docker', 'Self-hosted'],
+    description: 'Proyecto propio, en desarrollo: un buscador que scrapea Zonaprop, Argenprop y Mercado Libre, unifica las publicaciones en un solo lugar y las ubica en un mapa, para encontrar buenas ofertas. Corre en un home server que administro yo.',
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Playwright', 'Web scraping', 'Docker', 'Self-hosted'],
     note: 'No es público porque se alimenta de scraping de esos portales, que sus términos de uso no permiten. Si querés ver una demo, escribime.',
     links: [
       { label: 'Pedime una demo', url: 'mailto:nachoviau@gmail.com?subject=Demo%20buscador%20inmobiliario' },
@@ -39,8 +39,8 @@ const projects: Project[] = [
   {
     id: 'marketplace-distribuido',
     title: 'Marketplace distribuido',
-    description: 'Marketplace construido como sistema distribuido: servicios independientes desplegados en Heroku, cada uno con su propia base de datos (MongoDB y SQL), y un servicio dedicado a la API de autenticación. Proyecto grupal de la facultad (FIUBA).',
-    tags: ['Sistemas Distribuidos', 'MongoDB', 'SQL', 'Heroku', 'API REST', 'Autenticación'],
+    description: 'Marketplace construido como sistema distribuido: servicios independientes desplegados en Heroku, cada uno con su propia base de datos (MongoDB y SQL), y un servicio dedicado a la API de autenticación. Desarrollado en Go. Proyecto grupal de la facultad (FIUBA).',
+    tags: ['Go', 'Sistemas Distribuidos', 'MongoDB', 'SQL', 'Heroku', 'API REST', 'Autenticación'],
     note: 'El repositorio quedó en una organización privada de la facultad.',
   },
   {
