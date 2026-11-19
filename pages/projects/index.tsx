@@ -39,7 +39,7 @@ const projects: Project[] = [
   {
     id: 'marketplace-distribuido',
     title: 'Marketplace distribuido',
-    description: 'Marketplace construido como sistema distribuido: servicios independientes desplegados en Heroku, cada uno con su propia base de datos (MongoDB y SQL), y un servicio dedicado a la API de autenticación. Desarrollado en Go. Proyecto grupal de la facultad (FIUBA).',
+    description: 'Marketplace construido como sistema distribuido: servicios independientes desplegados en Heroku, cada uno con su propia base de datos (MongoDB y SQL), y un servicio dedicado a la API de autenticación. Entre los lenguajes que usamos está Go. Proyecto grupal de la facultad (FIUBA).',
     tags: ['Go', 'Sistemas Distribuidos', 'MongoDB', 'SQL', 'Heroku', 'API REST', 'Autenticación'],
     note: 'El repositorio quedó en una organización privada de la facultad.',
   },
