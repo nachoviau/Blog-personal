@@ -84,7 +84,7 @@ const jobs: Job[] = [
     company: 'Facultad de Ingeniería, UBA',
     url: 'https://fiubata050.github.io/',
     logo: '/logos/fiuba.png',
-    period: '1er cuatrimestre 2026',
+    period: '2do cuatrimestre 2025',
   },
   {
     role: 'Profesor',
