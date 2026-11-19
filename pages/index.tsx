@@ -21,10 +21,7 @@ export default function Home() {
             Este es un espacio para compartir lo que voy aprendiendo y lo que voy desarrollando.
           </p>
           <p>
-            Subir algunos proyectos que me parezcan piolas, y ver cómo podemos hacer para que las cosas complicadas sean simples.
-          </p>
-          <p>
-            Todo el laburo es abierto y libre, te invito que que mires un poco y me escribas si algo te despierta curiosidad.
+            Te invito a que mires un poco y me escribas si algo te despierta curiosidad.
           </p>
           <p>
             Gracias por visitar! te mando un abrazo!
