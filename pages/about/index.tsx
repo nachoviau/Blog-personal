@@ -55,6 +55,9 @@ const jobs: Job[] = [
     logo: '/logos/gamu.png',
     period: 'Actualidad',
     summary: 'Desarrollo de software para GAMU Partners y para distintos clientes de la consultora.',
+    bullets: [
+      'Desarrollo de la plataforma que usan para modelar riesgos y llevar adelante la planificación estratégica de sus clientes, hosteada en un VPS',
+    ],
     clients: [
       {
         name: 'Santa María de la Salud',
@@ -90,7 +93,7 @@ const skillGroups: { title: string; color: string; skills: string[] }[] = [
   { title: 'Backend', color: 'bg-blue-600', skills: ['FastAPI', 'Node.js', 'Express', 'Laravel', 'Prisma', 'API REST'] },
   { title: 'Frontend', color: 'bg-green-600', skills: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS'] },
   { title: 'Datos', color: 'bg-purple-600', skills: ['PostgreSQL', 'PostGIS', 'MariaDB', 'MongoDB', 'Supabase', 'Pandas', 'Spark', 'Web scraping'] },
-  { title: 'Infraestructura', color: 'bg-teal-600', skills: ['Docker', 'AWS', 'Firebase', 'Heroku', 'Linux', 'Home server', 'Git'] },
+  { title: 'Infraestructura', color: 'bg-teal-600', skills: ['Docker', 'AWS', 'Firebase', 'Heroku', 'Linux', 'VPS', 'Home server', 'Git'] },
   { title: 'IA', color: 'bg-pink-600', skills: ['Claude Code', 'Claude (AWS Bedrock)', 'OpenAI API'] },
   { title: 'Testing', color: 'bg-gray-600', skills: ['Playwright', 'Jest', 'pytest', 'PHPUnit'] },
 ];
