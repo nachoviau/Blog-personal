@@ -10,9 +10,39 @@ interface Project {
   githubUrl?: string;
   demoUrl?: string;
   image?: string;
+  note?: string; // aclaración, p. ej. por qué no hay repo público
+  links?: { label: string; url: string }[]; // links extra además de GitHub/Demo
 }
 
 const projects: Project[] = [
+  {
+    id: 'padi',
+    title: 'Plataforma PADI - Trabajo Profesional',
+    description: 'Plataforma web en producción para la Fundación PADI (Programa de Atención al Desarrollo Infantil). Docentes, directivos y coordinadores gestionan y aplican evaluaciones del desarrollo de niños en edad preescolar, con estadísticas por sala, escuela y zona. Trabajo Profesional de Ingeniería en Informática (FIUBA), hecho en un equipo de cuatro, todos full stack.',
+    tags: ['React', 'TypeScript', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Supabase', 'Firebase'],
+    githubUrl: 'https://github.com/fundacion-PADI-trabajo-profesional',
+    links: [
+      { label: 'En producción', url: 'https://fundacionpadi-41cb2.web.app' },
+      { label: 'Decisiones de arquitectura', url: 'https://fundacion-padi-trabajo-profesional.github.io/documentacion-ADR/' },
+    ],
+  },
+  {
+    id: 'buscador-inmobiliario',
+    title: 'Buscador de ofertas inmobiliarias',
+    description: 'Proyecto propio, en desarrollo: un buscador que unifica publicaciones de Zonaprop y Argenprop en un solo lugar y las ubica en un mapa, para encontrar buenas ofertas. Corre en un home server que administro yo.',
+    tags: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Playwright', 'Docker', 'Self-hosted'],
+    note: 'No es público porque se alimenta de scraping de esos portales, que sus términos de uso no permiten. Si querés ver una demo, escribime.',
+    links: [
+      { label: 'Pedime una demo', url: 'mailto:nachoviau@gmail.com?subject=Demo%20buscador%20inmobiliario' },
+    ],
+  },
+  {
+    id: 'marketplace-distribuido',
+    title: 'Marketplace distribuido',
+    description: 'Marketplace construido como sistema distribuido: servicios independientes desplegados en Heroku, cada uno con su propia base de datos (MongoDB y SQL), y un servicio dedicado a la API de autenticación. Proyecto grupal de la facultad (FIUBA).',
+    tags: ['Sistemas Distribuidos', 'MongoDB', 'SQL', 'Heroku', 'API REST', 'Autenticación'],
+    note: 'El repositorio quedó en una organización privada de la facultad.',
+  },
   {
     id: 'duck-game-remake',
     title: 'Duck Game Remake',
@@ -70,6 +100,11 @@ export default function ProjectsPage() {
               <p className="text-gray-300 leading-relaxed">
                 {project.description}
               </p>
+              {project.note && (
+                <p className="text-gray-400 text-sm leading-relaxed mt-3 border-l-2 border-orange-500 pl-3">
+                  {project.note}
+                </p>
+              )}
             </div>
 
             {/* Tags */}
@@ -85,7 +120,7 @@ export default function ProjectsPage() {
             </div>
 
             {/* Links */}
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {project.githubUrl && project.githubUrl !== '#' && (
                 <a
                   href={project.githubUrl}
@@ -120,6 +155,17 @@ export default function ProjectsPage() {
                   Demo
                 </a>
               )}
+              {project.links?.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         ))}
