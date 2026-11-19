@@ -296,18 +296,57 @@ export default function AboutPage() {
           {/* Voluntariado */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Voluntariado</h2>
-            <div className="bg-gray-800 rounded-lg p-6">
-              <div className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-gray-300">• Hospice San Camilo</p>
-                    <p className="text-gray-300">• Barrio &quot;El Garrote&quot;</p>
-                    <p className="text-gray-300">• Fundación Espartanos</p>
+            <div className="space-y-4">
+              <div className="bg-gray-800 rounded-lg p-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <Logo src="/logos/hospice.jpg" alt="Logo del Hospice San Camilo" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-white">
+                      <a href="https://www.hospicesancamilo.org.ar/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                        Hospice San Camilo
+                      </a>
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-2">2024 - 2026</p>
+                    <p className="text-gray-300 text-sm">
+                      Voluntario en cuidados paliativos. También les desarrollé el sistema de gestión de voluntarios y partes diarios (está en Proyectos).
+                    </p>
                   </div>
                 </div>
-                <p className="text-gray-400 text-sm mt-4">
-                  Actividades de cuidados paliativos, coordinación de juegos, clases de apoyo escolar y visitas a presos.
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6">
+                <h3 className="text-lg font-medium text-white">Barrio &quot;El Garrote&quot; (Tigre)</h3>
+                <p className="text-gray-400 text-sm mb-2">Desde 2022</p>
+                <p className="text-gray-300 text-sm mb-4">
+                  Doy una mano con talleres para niños del barrio.
                 </p>
+                <a
+                  href="https://www.google.com/maps/place/El+Garrote,+Provincia+de+Buenos+Aires/@-34.427555,-58.560453,16z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block rounded-md overflow-hidden border border-gray-700 hover:border-orange-500 transition-colors"
+                >
+                  {/* Mapa estático armado con tiles de OpenStreetMap (atribución incluida en la imagen) */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/img/mapa-el-garrote.jpg" alt="Mapa con la ubicación del barrio El Garrote, en Tigre" className="w-full h-auto block" loading="lazy" />
+                </a>
+                <p className="text-gray-400 text-xs mt-2">Tocá el mapa para abrirlo en Google Maps.</p>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <Logo src="/logos/espartanos.png" alt="Logo de Fundación Espartanos" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-white">
+                      <a href="https://www.fundacionespartanos.org/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                        Fundación Espartanos
+                      </a>
+                    </h3>
+                    <p className="text-gray-300 text-sm mt-2">
+                      Visitas a personas privadas de la libertad.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
