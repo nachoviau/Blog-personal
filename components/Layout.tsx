@@ -63,7 +63,7 @@ export default function Layout({ children, sidebar }: LayoutProps) {
       <footer className="bg-gray-800 border-t border-gray-700 mt-auto w-full">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="text-center text-gray-400 text-sm">
-            © 2025 Ignacio Viau. Hecho con Next.js y Tailwind CSS.
+            © 2026 Ignacio Viau
           </div>
         </div>
       </footer>
