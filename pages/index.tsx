@@ -18,7 +18,7 @@ export default function Home() {
         </div>
         <div className="space-y-8 text-xl text-gray-300 leading-relaxed font-mono">
           <p>
-            La idea acá es tratar de compartir lo que aprendo, lo que me sorprende y lo que no entiendo (que suele ser la gran parte).
+            Este es un espacio para compartir lo que voy aprendiendo y lo que voy desarrollando.
           </p>
           <p>
             Subir algunos proyectos que me parezcan piolas, y ver cómo podemos hacer para que las cosas complicadas sean simples.
