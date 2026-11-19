@@ -21,7 +21,7 @@ export default function Home() {
             La idea acá es tratar de compartir lo que aprendo, lo que me sorprende y lo que no entiendo (que suele ser la gran parte).
           </p>
           <p>
-            Leer algunos papers interesantes, subir algunos proyectos que me parezcan piolas. Y ver como podemos hacer para hacer las cosas complicadas, simples.
+            Subir algunos proyectos que me parezcan piolas, y ver cómo podemos hacer para que las cosas complicadas sean simples.
           </p>
           <p>
             Todo el laburo es abierto y libre, te invito que que mires un poco y me escribas si algo te despierta curiosidad.

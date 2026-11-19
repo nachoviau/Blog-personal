@@ -17,22 +17,14 @@ export default function Layout({ children, sidebar }: LayoutProps) {
       <nav className="bg-gray-800 border-b border-gray-700 sticky top-0 z-50 h-20 flex items-center w-full">
         <div className={`w-full flex justify-between items-center h-20 px-4 sm:px-6 lg:px-8 ${!isPapers ? 'max-w-4xl mx-auto' : ''}`}>
             {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
+          <Link href="/" className="text-xl md:text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors whitespace-nowrap">
               Ignacio Viau
             </Link>
             {/* Navigation Links */}
-            <div className="hidden md:flex space-x-8">
-              <Link 
-                href="/papers" 
-              className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
-                isPapers ? 'text-blue-400 bg-gray-700' : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                }`}
-              >
-              Papers
-              </Link>
+            <div className="flex space-x-1 md:space-x-8">
               <Link 
                 href="/projects" 
-              className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
+              className={`px-2 md:px-4 py-3 rounded-md text-sm md:text-base font-medium whitespace-nowrap transition-colors ${
                 pathname === '/projects' ? 'text-blue-400 bg-gray-700' : 'text-gray-300 hover:text-white hover:bg-gray-700'
                 }`}
               >
@@ -40,7 +32,7 @@ export default function Layout({ children, sidebar }: LayoutProps) {
               </Link>
               <Link 
                 href="/about" 
-              className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
+              className={`px-2 md:px-4 py-3 rounded-md text-sm md:text-base font-medium whitespace-nowrap transition-colors ${
                 pathname === '/about' ? 'text-blue-400 bg-gray-700' : 'text-gray-300 hover:text-white hover:bg-gray-700'
                 }`}
               >

@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     id: 'personal-blog',
     title: 'Blog Personal',
-    description: 'Este mismo sitio web construido con Next.js y TypeScript. Un espacio para compartir análisis de papers técnicos y proyectos.',
+    description: 'Este mismo sitio web construido con Next.js y TypeScript. Un espacio para presentarme y compartir mis proyectos.',
     tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Markdown'],
     githubUrl: 'https://github.com/nachoviau/Blog-personal', // Enlace real al repo
   },
