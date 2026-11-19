@@ -106,7 +106,7 @@ const skillGroups: { title: string; color: string; skills: string[] }[] = [
   { title: 'Frontend', color: 'bg-green-600', skills: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS'] },
   { title: 'Datos', color: 'bg-purple-600', skills: ['PostgreSQL', 'PostGIS', 'MariaDB', 'MongoDB', 'Supabase', 'Pandas', 'Spark', 'Web scraping'] },
   { title: 'Infraestructura', color: 'bg-teal-600', skills: ['Docker', 'AWS', 'Firebase', 'Heroku', 'Linux', 'VPS', 'Home server', 'Git'] },
-  { title: 'IA', color: 'bg-pink-600', skills: ['Claude Code', 'Claude (AWS Bedrock)', 'OpenAI API'] },
+  { title: 'IA y herramientas', color: 'bg-pink-600', skills: ['Claude Code', 'Claude (AWS Bedrock)', 'OpenAI API'] },
   { title: 'Testing', color: 'bg-gray-600', skills: ['Playwright', 'Jest', 'pytest', 'PHPUnit'] },
 ];
 
@@ -227,16 +227,30 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Educación</h2>
             <div className="bg-gray-800 rounded-lg p-6">
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-lg font-medium text-white">Ingeniería Informática</h3>
-                  <p className="text-orange-400">Universidad de Buenos Aires - Facultad de Ingeniería (FIUBA)</p>
-                  <p className="text-gray-400 text-sm">Recibido · título en trámite</p>
+              <div className="space-y-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <Logo src="/logos/fiuba.png" alt="Logo de la Facultad de Ingeniería de la UBA" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-white">Ingeniería Informática</h3>
+                    <p className="text-orange-400">
+                      <a href="https://www.fi.uba.ar/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                        Universidad de Buenos Aires - Facultad de Ingeniería (FIUBA)
+                      </a>
+                    </p>
+                    <p className="text-gray-400 text-sm">Recibido · título en trámite</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white">Bachillerato</h3>
-                  <p className="text-orange-400">Holy Cross</p>
-                  <p className="text-gray-400 text-sm">2019</p>
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <Logo src="/logos/holycross.png" alt="Escudo del Colegio Holy Cross" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-white">Bachillerato</h3>
+                    <p className="text-orange-400">
+                      <a href="https://www.holycross.edu.ar/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                        Colegio Holy Cross
+                      </a>
+                    </p>
+                    <p className="text-gray-400 text-sm">2019</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -246,9 +260,6 @@ export default function AboutPage() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Habilidades Técnicas</h2>
             <div className="bg-gray-800 rounded-lg p-6">
-              <p className="text-gray-300 leading-relaxed mb-6 border-l-2 border-orange-500 pl-3">
-                Trabajo principalmente con Claude Code.
-              </p>
               <div className="grid md:grid-cols-2 gap-6">
                 {skillGroups.map((group) => (
                   <div key={group.title}>
