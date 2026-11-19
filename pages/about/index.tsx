@@ -86,6 +86,18 @@ const jobs: Job[] = [
     logo: '/logos/fiuba.png',
     period: '1er cuatrimestre 2026',
   },
+  {
+    role: 'Profesor',
+    company: 'Colegio San Esteban',
+    url: 'https://colegiosanesteban.edu.ar/',
+    logo: '/logos/sanesteban.png',
+    period: 'Marzo 2024 - Diciembre 2024',
+    bullets: [
+      'Docente en nivel secundario',
+      'Diseño de materiales educativos y ejercicios prácticos',
+      'Acompañamiento y tutoría de jóvenes en su desarrollo académico',
+    ],
+  },
 ];
 
 const skillGroups: { title: string; color: string; skills: string[] }[] = [
@@ -200,24 +212,12 @@ export default function AboutPage() {
 
               {/* Experiencia anterior */}
               <div className="bg-gray-800 rounded-lg p-6">
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-medium text-white">Profesor</h3>
-                    <p className="text-orange-400">Colegio San Esteban</p>
-                    <p className="text-gray-400 text-sm mb-2">Marzo 2024 - Diciembre 2024</p>
-                    <ul className="text-gray-300 space-y-1 text-sm">
-                      <li>• Docente en nivel secundario</li>
-                      <li>• Diseño de materiales educativos y ejercicios prácticos</li>
-                      <li>• Acompañamiento y tutoría de jóvenes en su desarrollo académico</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium text-white">Tutor Particular</h3>
-                    <p className="text-orange-400">Química, Física y Matemática</p>
-                    <ul className="text-gray-300 space-y-1 text-sm mt-2">
-                      <li>• Apoyo personalizado a estudiantes en niveles secundarios y preuniversitarios</li>
-                    </ul>
-                  </div>
+                <div>
+                  <h3 className="text-lg font-medium text-white">Tutor Particular</h3>
+                  <p className="text-orange-400">Química, Física y Matemática</p>
+                  <ul className="text-gray-300 space-y-1 text-sm mt-2">
+                    <li>• Apoyo personalizado a estudiantes en niveles secundarios y preuniversitarios</li>
+                  </ul>
                 </div>
               </div>
             </div>
