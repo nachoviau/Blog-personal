@@ -311,6 +311,23 @@ export default function AboutPage() {
             <div className="space-y-4">
               <div className="bg-gray-800 rounded-lg p-6">
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <Logo src="/logos/padi.png" alt="Logo de Fundación PADI" />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-medium text-white">
+                      <a href="https://www.padifundacion.org/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                        Fundación PADI
+                      </a>
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-2">Actualidad</p>
+                    <p className="text-gray-300 text-sm">
+                      Sigo dando desarrollo y mantenimiento a la plataforma que desarrollamos como Trabajo Profesional de la carrera (está en Proyectos).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-6">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                   <Logo src="/logos/hospice.jpg" alt="Logo del Hospice San Camilo" />
                   <div className="flex-1 min-w-0">
                     <h3 className="text-lg font-medium text-white">
