@@ -1,6 +1,121 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 
+interface Client {
+  name: string;
+  kind: string;
+  url: string;
+  logo: string;
+  bullets: string[];
+}
+
+interface Job {
+  role: string;
+  company: string;
+  url?: string;
+  logo: string;
+  period: string;
+  summary?: string;
+  bullets?: string[];
+  tech?: string[];
+  clients?: Client[];
+}
+
+const jobs: Job[] = [
+  {
+    role: 'Desarrollador de software',
+    company: 'Yieldy',
+    url: 'https://yieldy.ai/',
+    logo: '/logos/yieldy.png',
+    period: 'Actualidad',
+    summary: 'Agtech que combina datos georreferenciados, machine learning e imágenes satelitales para el agro.',
+    bullets: [
+      'Desarrollo de la plataforma',
+      'Modelo de transacción de los lotes',
+      'Procesamiento y almacenamiento de los datos',
+      'Pruebas, backtests y as-ifs para evaluar la viabilidad del modelo y del negocio',
+    ],
+  },
+  {
+    role: 'Desarrollador de software',
+    company: 'Blue Pampa Company',
+    url: 'https://www.bluepampacompany.com/',
+    logo: '/logos/bluepampa.png',
+    period: 'Actualidad',
+    summary: 'Consultora de estrategia de negocios y cumplimiento regulatorio.',
+    bullets: [
+      'Desarrollo de una plataforma de permisología minera (gestión de permisos regulatorios de proyectos mineros), actualmente en desarrollo',
+    ],
+    tech: ['React', 'Laravel (PHP)', 'MariaDB', 'Docker', 'AWS (EC2, S3, SES, Bedrock)'],
+  },
+  {
+    role: 'Desarrollador de software',
+    company: 'GAMU Partners',
+    url: 'https://gamupartners.com/',
+    logo: '/logos/gamu.png',
+    period: 'Actualidad',
+    summary: 'Desarrollo de software para GAMU Partners y para distintos clientes de la consultora.',
+    clients: [
+      {
+        name: 'Santa María de la Salud',
+        kind: 'centro médico',
+        url: 'https://santamariadelasalud.com.ar/',
+        logo: '/logos/santamaria.jpg',
+        bullets: ['Plataforma para automatizar la liquidación de los médicos'],
+      },
+      {
+        name: 'Pentamar',
+        kind: 'construcciones y dragados',
+        url: 'https://www.pentamar.com/',
+        logo: '/logos/pentamar.png',
+        bullets: [
+          'Plataforma para relevar información de la maquinaria, analizar sus rendimientos y brindar balances',
+          'Migración del sistema de compras, de uno desactualizado a uno más moderno, junto con todos sus datos',
+          'Automatización de la contabilidad de horas de los trabajadores',
+        ],
+      },
+    ],
+  },
+  {
+    role: 'Ayudante de Sistemas Distribuidos I (TA050)',
+    company: 'Facultad de Ingeniería, UBA',
+    url: 'https://fiubata050.github.io/',
+    logo: '/logos/fiuba.png',
+    period: '1er cuatrimestre 2026',
+  },
+];
+
+const skillGroups: { title: string; color: string; skills: string[] }[] = [
+  { title: 'Lenguajes', color: 'bg-orange-600', skills: ['Python', 'TypeScript', 'JavaScript', 'Go', 'PHP', 'C', 'C++', 'Rust', 'SQL'] },
+  { title: 'Backend', color: 'bg-blue-600', skills: ['FastAPI', 'Node.js', 'Express', 'Laravel', 'Prisma', 'API REST'] },
+  { title: 'Frontend', color: 'bg-green-600', skills: ['React', 'Next.js', 'Tailwind CSS', 'HTML/CSS'] },
+  { title: 'Datos', color: 'bg-purple-600', skills: ['PostgreSQL', 'PostGIS', 'MariaDB', 'MongoDB', 'Supabase', 'Pandas', 'Spark', 'Web scraping'] },
+  { title: 'Infraestructura', color: 'bg-teal-600', skills: ['Docker', 'AWS', 'Firebase', 'Heroku', 'Linux', 'Home server', 'Git'] },
+  { title: 'IA', color: 'bg-pink-600', skills: ['Claude Code', 'Claude (AWS Bedrock)', 'OpenAI API'] },
+  { title: 'Testing', color: 'bg-gray-600', skills: ['Playwright', 'Jest', 'pytest', 'PHPUnit'] },
+];
+
+function Logo({ src, alt, small }: { src: string; alt: string; small?: boolean }) {
+  return (
+    <div className={`bg-white rounded-md flex items-center justify-center shrink-0 p-2 ${small ? 'w-24 h-12' : 'w-32 h-16'}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="max-w-full max-h-full object-contain" />
+    </div>
+  );
+}
+
+function Chips({ items }: { items: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-2 mt-3">
+      {items.map((item) => (
+        <span key={item} className="bg-gray-700 text-gray-200 px-2 py-0.5 rounded text-xs">
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <Layout>
@@ -16,14 +131,92 @@ export default function AboutPage() {
           <section>
             <div className="bg-gray-800 rounded-lg p-6">
               <p className="text-gray-300 leading-relaxed mb-4">
-                La idea es que esta pagina tambien sirva de cv asi que te comento un poco sobre mi!
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Soy estudiante de Ingeniería Informática y en este camino fui aprendiendo bastante de programación y análisis de datos.
+                Soy Ingeniero Informático, recibido en la UBA (título en trámite). Hoy trabajo desarrollando software en Yieldy, Blue Pampa y GAMU Partners.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Creo en lo importante que es mantenerse un poco despierto y siempre aprendiendo algo nuevo. Por eso en parte arme esta pagina para compartir un poco de esto.
               </p>
+            </div>
+          </section>
+
+          {/* Experience */}
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">Experiencia</h2>
+            <div className="space-y-4">
+              {jobs.map((job) => (
+                <div key={job.company} className="bg-gray-800 rounded-lg p-6">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                    <Logo src={job.logo} alt={`Logo de ${job.company}`} />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-medium text-white">{job.role}</h3>
+                      <p className="text-orange-400">
+                        {job.url ? (
+                          <a href={job.url} target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                            {job.company}
+                          </a>
+                        ) : (
+                          job.company
+                        )}
+                      </p>
+                      <p className="text-gray-400 text-sm mb-2">{job.period}</p>
+                      {job.summary && <p className="text-gray-300 text-sm mb-2">{job.summary}</p>}
+                      {job.bullets && (
+                        <ul className="text-gray-300 space-y-1 text-sm">
+                          {job.bullets.map((b) => (
+                            <li key={b}>• {b}</li>
+                          ))}
+                        </ul>
+                      )}
+                      {job.tech && <Chips items={job.tech} />}
+                      {job.clients && (
+                        <div className="mt-4 space-y-4">
+                          {job.clients.map((client) => (
+                            <div key={client.name} className="flex flex-col sm:flex-row gap-3 sm:gap-4 border-l-2 border-gray-700 pl-4">
+                              <Logo src={client.logo} alt={`Logo de ${client.name}`} small />
+                              <div className="flex-1 min-w-0">
+                                <p className="text-white font-medium">
+                                  <a href={client.url} target="_blank" rel="noopener noreferrer" className="hover:text-orange-300 underline-offset-4 hover:underline">
+                                    {client.name}
+                                  </a>
+                                  <span className="text-gray-400 font-normal text-sm"> · {client.kind}</span>
+                                </p>
+                                <ul className="text-gray-300 space-y-1 text-sm mt-1">
+                                  {client.bullets.map((b) => (
+                                    <li key={b}>• {b}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {/* Experiencia anterior */}
+              <div className="bg-gray-800 rounded-lg p-6">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-medium text-white">Profesor</h3>
+                    <p className="text-orange-400">Colegio San Esteban</p>
+                    <p className="text-gray-400 text-sm mb-2">Marzo 2024 - Diciembre 2024</p>
+                    <ul className="text-gray-300 space-y-1 text-sm">
+                      <li>• Docente en nivel secundario</li>
+                      <li>• Diseño de materiales educativos y ejercicios prácticos</li>
+                      <li>• Acompañamiento y tutoría de jóvenes en su desarrollo académico</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-medium text-white">Tutor Particular</h3>
+                    <p className="text-orange-400">Química, Física y Matemática</p>
+                    <ul className="text-gray-300 space-y-1 text-sm mt-2">
+                      <li>• Apoyo personalizado a estudiantes en niveles secundarios y preuniversitarios</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -34,8 +227,8 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-lg font-medium text-white">Ingeniería Informática</h3>
-                  <p className="text-orange-400">UBA XXI / UBA</p>
-                  <p className="text-gray-400 text-sm">2020 - Actualidad (CBC adelantado)</p>
+                  <p className="text-orange-400">Universidad de Buenos Aires - Facultad de Ingeniería (FIUBA)</p>
+                  <p className="text-gray-400 text-sm">Recibido · título en trámite</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-medium text-white">Bachillerato</h3>
@@ -46,77 +239,26 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Experience */}
-          <section>
-            <h2 className="text-2xl font-semibold text-white mb-4">Experiencia</h2>
-            <div className="bg-gray-800 rounded-lg p-6">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium text-white">Profesor</h3>
-                  <p className="text-orange-400">Colegio San Esteban</p>
-                  <p className="text-gray-400 text-sm mb-2">Marzo 2024 - Diciembre 2024</p>
-                  <ul className="text-gray-300 space-y-1 text-sm">
-                    <li>• Docente en nivel secundario</li>
-                    <li>• Diseño de materiales educativos y ejercicios prácticos</li>
-                    <li>• Acompañamiento y tutoría de jóvenes en su desarrollo académico</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white">Tutor Particular</h3>
-                  <p className="text-orange-400">Química, Física y Matemática</p>
-                  <ul className="text-gray-300 space-y-1 text-sm mt-2">
-                    <li>• Apoyo personalizado a estudiantes en niveles secundarios y preuniversitarios</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* Skills */}
           <section>
             <h2 className="text-2xl font-semibold text-white mb-4">Habilidades Técnicas</h2>
             <div className="bg-gray-800 rounded-lg p-6">
+              <p className="text-gray-300 leading-relaxed mb-6 border-l-2 border-orange-500 pl-3">
+                Trabajo principalmente con Claude Code.
+              </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-3">Programación</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Python', 'C', 'C++', 'JavaScript', 'Rust'].map((skill) => (
-                      <span key={skill} className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
+                {skillGroups.map((group) => (
+                  <div key={group.title}>
+                    <h3 className="text-lg font-medium text-white mb-3">{group.title}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {group.skills.map((skill) => (
+                        <span key={skill} className={`${group.color} text-white px-3 py-1 rounded-full text-sm`}>
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-3">Análisis de Datos</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Pandas', 'Spark', 'SQL'].map((skill) => (
-                      <span key={skill} className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-3">Web Development</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Next.js', 'React', 'Tailwind CSS', 'HTML/CSS'].map((skill) => (
-                      <span key={skill} className="bg-green-600 text-white px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-white mb-3">Herramientas</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {['Markdown', 'JSON', 'Node.js', 'Git'].map((skill) => (
-                      <span key={skill} className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </section>
